@@ -517,7 +517,7 @@ def delete_student(request, pk = None):
 def borrows(request):
     context = context_data(request)
     context['page'] = 'borrow'
-    context['page_title'] = "Borrowing Transaction List"
+    context['page_title'] = "Borrowing Record List"
     context['borrows'] = models.Borrow.objects.order_by('status').all()
     return render(request, 'borrows.html', context)
 
