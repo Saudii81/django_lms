@@ -156,14 +156,35 @@
 
     <!--Footer-->
     {% if footer %}
-    <footer class="bg-secondary text-lg-start text-white">
+    <footer class="text-lg-start custom-footer">
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(34, 32, 29, 0.2);">
-            Developed by Mohammad Usman © {% now 'Y' %}
-        </div>
+    Developed by Mohammad Usman © {% now 'Y' %}
+    <div class="mt-2">
+        <a href="https://twitter.com/yourprofile" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-twitter fa-lg"></i>
+        </a>
+        <a href="https://facebook.com/yourprofile" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://instagram.com/yourprofile" target="_blank" class="text-dark mx-2">
+            <i class="fab fa-instagram fa-lg"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Add Font Awesome if not already included -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
         <!-- Copyright -->
     </footer>
+    <style>
+    .custom-footer {
+        background-color: #808080; /* medium grey */
+        color: white; /* make text readable */
+    }
+</style>
     {% endif %}
     <script>
         const loader = $('<div>')
