@@ -533,7 +533,7 @@ def save_borrow(request):
             form = forms.SaveBorrow(request.POST) 
 
         if form.is_valid():
-            form.save
+            form.save()
             if post['id'] == '':
                 messages.success(request, "Borrowing Transaction has been saved successfully.")
             else:
