@@ -535,9 +535,9 @@ def save_borrow(request):
         if form.is_valid():
             form.save()
             if post['id'] == '':
-                messages.success(request, "Borrowing Transaction has been saved successfully.")
+                messages.success(request, "Borrowing Detail has been saved successfully.")
             else:
-                messages.success(request, "Borrowing Transaction has been updated successfully.")
+                messages.success(request, "Borrowing Detail has been updated successfully.")
             resp['status'] = 'success'
         else:
             for field in form:
